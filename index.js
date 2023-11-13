@@ -30,6 +30,11 @@ app.post("/new",(req,res)=>{
     console.log("add");
 })
 
+app.put("/",(req,res)=>{
+    console.log("asdasd")
+})
+
+
 app.listen(4000, () => {
     console.log("server is running at port 4000");
 });
