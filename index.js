@@ -20,10 +20,14 @@ app.post("/add", (req, res) => {
 })
 
 app.get("/getusers", (req, res) => {
-    let authorization = req.headers['authorization'].split(' ')[1];
+    let authorization = req.headers['authorization']?.split(' ')[1];
     console.log(authorization);
     let mytoken = jwt.verify(authorization, "12345678");
     return res.status(200).json({ mytoken });
+})
+
+app.post("/new",(req,res)=>{
+    console.log("add");
 })
 
 app.listen(4000, () => {
